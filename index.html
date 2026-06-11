@@ -76,9 +76,15 @@
             </div>
           </div>
 
-          <div class="groupInstructions">
-            <p>To claim group pricing, complete the information below and click the <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/3bda240fdef745a78f4464f6087c123a/1a9b0becf27d4bd5a434d2a890290274.png" alt="Next" class="inlineImg"> button at the bottom of the page. Choose <strong>"Yes"</strong> when asked <strong>"Do you intend on purchasing a group registration package for 10 or more people?"</strong></p>
-            <p>You will not be charged at this time — a member of our team will follow up to complete registration for each member of your group.</p>
+          <div class="groupContact">
+            <div class="groupContactLabel">Reach out to a dedicated member of our team with any questions.</div>
+            <div class="groupFormFields" id="groupFormFields">
+              <input type="text"  id="gcName"  placeholder="Your name"  autocomplete="name">
+              <input type="email" id="gcEmail" placeholder="Your email" autocomplete="email">
+              <textarea id="gcMsg" placeholder="Your question or message" rows="1"></textarea>
+              <button class="gcSendBtn" id="gcSend">Send →</button>
+            </div>
+            <div id="gcSuccess">✓ Message sent! Our team will be in touch soon.</div>
           </div>
 
         </div>

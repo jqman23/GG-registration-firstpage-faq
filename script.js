@@ -50,6 +50,51 @@
     updateGroupSlider();
   }
 
+  // ── Group contact form ──────────────────────────────────
+  const gcSend = document.getElementById('gcSend');
+  if (gcSend) {
+    gcSend.addEventListener('click', async function () {
+      const nameEl  = document.getElementById('gcName');
+      const emailEl = document.getElementById('gcEmail');
+      const msgEl   = document.getElementById('gcMsg');
+      let valid = true;
+      [nameEl, emailEl, msgEl].forEach(function (el) {
+        if (!el.value.trim()) {
+          el.classList.add('gcError');
+          el.addEventListener('input', function () { el.classList.remove('gcError'); }, { once: true });
+          valid = false;
+        }
+      });
+      if (!valid) return;
+      this.disabled    = true;
+      this.textContent = 'Sending…';
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/globalgathering@cuanschutz.edu', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name:      nameEl.value.trim(),
+            email:     emailEl.value.trim(),
+            message:   msgEl.value.trim(),
+            _subject:  'Group Registration Question — Global Gathering',
+            _template: 'box'
+          })
+        });
+        if (!res.ok) throw new Error();
+        document.getElementById('groupFormFields').style.display = 'none';
+        document.getElementById('gcSuccess').style.display = 'block';
+        // let panel resize
+        const panel = gcSend.closest('.faqPanel');
+        if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
+        reportHeight();
+      } catch (_) {
+        this.disabled    = false;
+        this.textContent = 'Send →';
+        alert('Something went wrong — please email globalgathering@cuanschutz.edu directly.');
+      }
+    });
+  }
+
   // ── Accordion ───────────────────────────────────────────
   const items = Array.from(document.querySelectorAll('.faqItem'));
 
