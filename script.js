@@ -122,12 +122,27 @@
     });
   });
 
-  document.getElementById('openAll').addEventListener('click', function () {
+  // ── Show/hide FAQ list ───────────────────────────────────
+  var faqList    = document.getElementById('faqList');
+  var toggleBtn  = document.getElementById('toggleFaqs');
+  var openAllBtn = document.getElementById('openAll');
+  var closeAllBtn= document.getElementById('closeAll');
+
+  toggleBtn.addEventListener('click', function () {
+    var isHidden = faqList.classList.contains('hidden');
+    faqList.classList.toggle('hidden', !isHidden);
+    toggleBtn.textContent = isHidden ? 'Hide FAQs' : 'See FAQs';
+    openAllBtn.classList.toggle('hidden', !isHidden);
+    closeAllBtn.classList.toggle('hidden', !isHidden);
+    reportHeight();
+  });
+
+  openAllBtn.addEventListener('click', function () {
     items.forEach(openItem);
     reportHeight();
   });
 
-  document.getElementById('closeAll').addEventListener('click', function () {
+  closeAllBtn.addEventListener('click', function () {
     items.forEach(closeItem);
     reportHeight();
   });

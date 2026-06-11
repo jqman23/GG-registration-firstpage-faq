@@ -20,6 +20,7 @@ html, body {
   display: flex;
   gap: 8px;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 #faqControls button {
@@ -35,16 +36,22 @@ html, body {
   letter-spacing: .02em;
 }
 
-#openAll:hover {
+#faqControls button:hover {
   background: #111;
   color: #fff;
   border-color: #111;
 }
 
-#closeAll:hover {
-  background: #111;
-  color: #fff;
+#toggleFaqs {
   border-color: #111;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#faqList {
+  transition: none;
 }
 
 /* ── FAQ items ── */
