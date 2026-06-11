@@ -182,3 +182,225 @@ html, body {
   height: 1.4em;
   margin: 0 2px -2px;
 }
+
+/* ── Group tab content ── */
+.groupContent {
+  padding: 0 !important;
+}
+
+.groupHero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px 14px;
+  background: #f7f7f7;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.groupHeroTag {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.38);
+  margin-bottom: 4px;
+}
+
+.groupHeroHeadline {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.groupHeroSub {
+  font-size: .75rem;
+  font-weight: 500;
+  color: rgba(0,0,0,.5);
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.groupHeroRight {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.groupSavingsBig {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
+.groupSavingsSub {
+  font-size: .65rem;
+  font-weight: 600;
+  color: rgba(0,0,0,.38);
+  margin-top: 3px;
+  white-space: nowrap;
+}
+
+/* slider */
+.groupSliderWrap {
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.groupSliderRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.groupPill {
+  flex-shrink: 0;
+  background: #111;
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 700;
+  padding: 3px 11px;
+  border-radius: 999px;
+  min-width: 72px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#groupSlider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(0,0,0,.13);
+  outline: none;
+  cursor: pointer;
+  accent-color: #111;
+}
+
+#groupSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid #111;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+#groupSlider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid #111;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.groupSliderEnd {
+  flex-shrink: 0;
+  font-size: .65rem;
+  font-weight: 600;
+  color: rgba(0,0,0,.3);
+}
+
+.groupResultRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.groupStrike {
+  font-size: .75rem;
+  font-weight: 600;
+  color: rgba(0,0,0,.3);
+  text-decoration: line-through;
+}
+
+.groupMeta {
+  font-size: .7rem;
+  font-weight: 500;
+  color: rgba(0,0,0,.32);
+}
+
+.groupArrow {
+  font-size: .75rem;
+  color: rgba(0,0,0,.2);
+}
+
+.groupTotal {
+  font-size: .75rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* tiers */
+.groupTiers {
+  display: flex;
+  padding: 12px 18px;
+  gap: 6px;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+  flex-wrap: wrap;
+}
+
+.groupTierItem {
+  flex: 1;
+  min-width: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 8px 6px;
+  border: 1.5px solid transparent;
+  transition: background .18s ease, border-color .18s ease;
+}
+
+.groupTierItem.active {
+  background: #111;
+  border-color: #111;
+}
+
+.groupTierItem.active .tierRange,
+.groupTierItem.active .tierDiscount {
+  color: #fff;
+}
+
+.tierRange {
+  font-size: .65rem;
+  font-weight: 700;
+  color: rgba(0,0,0,.4);
+  white-space: nowrap;
+}
+
+.tierDiscount {
+  font-size: .72rem;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+}
+
+/* instructions */
+.groupInstructions {
+  padding: 14px 18px 16px;
+}
+
+.groupInstructions p {
+  margin: 0 0 10px;
+  font-size: .82rem;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.65;
+}
+
+.groupInstructions p:last-child {
+  margin-bottom: 0;
+}
