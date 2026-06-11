@@ -28,7 +28,6 @@
     document.getElementById('groupIndiv').textContent      = fmt(indiv);
     document.getElementById('groupTotal').textContent      = fmt(total) + ' total';
     document.getElementById('groupSavingsBig').textContent = fmt(saved) + ' saved';
-    document.getElementById('heroPct').textContent         = pct + '%';
 
     document.querySelectorAll('.groupTierItem').forEach(function (el) {
       const min = +el.dataset.min;
