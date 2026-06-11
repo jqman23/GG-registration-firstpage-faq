@@ -128,13 +128,21 @@
   var openAllBtn = document.getElementById('openAll');
   var closeAllBtn= document.getElementById('closeAll');
 
-  toggleBtn.addEventListener('click', function () {
+  var toggleLine = document.getElementById('faqToggleLine');
+
+  function doToggle() {
     var isHidden = faqList.classList.contains('hidden');
     faqList.classList.toggle('hidden', !isHidden);
-    toggleBtn.textContent = isHidden ? 'Hide FAQs' : 'See FAQs';
     openAllBtn.classList.toggle('hidden', !isHidden);
     closeAllBtn.classList.toggle('hidden', !isHidden);
+    toggleLine.innerHTML = isHidden
+      ? 'Have questions before continuing with the registration process? <span id="toggleFaqs">Click here</span> to hide FAQs.'
+      : 'Have questions before continuing with the registration process? <span id="toggleFaqs">Click here</span> to see FAQs.';
     reportHeight();
+  }
+
+  toggleLine.addEventListener('click', function (e) {
+    if (e.target.id === 'toggleFaqs') doToggle();
   });
 
   openAllBtn.addEventListener('click', function () {

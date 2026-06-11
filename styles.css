@@ -18,9 +18,30 @@ html, body {
 /* ── Controls ── */
 #faqControls {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 10px;
   align-items: center;
+}
+
+#faqToggleLine {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+  line-height: 1.4;
+}
+
+#toggleFaqs {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #111;
+  transition: opacity .15s ease;
+}
+
+#toggleFaqs:hover {
+  opacity: .55;
 }
 
 #faqControls button {
@@ -39,10 +60,6 @@ html, body {
 #faqControls button:hover {
   background: #111;
   color: #fff;
-  border-color: #111;
-}
-
-#toggleFaqs {
   border-color: #111;
 }
 
