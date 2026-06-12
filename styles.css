@@ -209,6 +209,18 @@ html, body {
   font-style: italic;
 }
 
+.faqLink {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  transition: opacity .15s ease;
+}
+
+.faqLink:hover {
+  opacity: .5;
+}
+
 .inlineImg {
   vertical-align: middle;
   height: 1.4em;
