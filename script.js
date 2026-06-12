@@ -165,7 +165,7 @@
 
     var params = new URLSearchParams({
       sheet:  '2026Registration',
-      button: 'RegFirstPageFAQ'
+      button: 'FAQPageWidget'
     });
 
     try {
