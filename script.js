@@ -1,5 +1,5 @@
 (function () {
-  const INDIV = 175;
+  const INDIV = 175; const EARLY_BIRD = 0.90;
 
   function groupRate(n) {
     if (n >= 50) return 90;
@@ -20,7 +20,7 @@
     const n    = +slider.value;
     const rate = groupRate(n);
     const indiv = n * INDIV;
-    const total = n * rate;
+    const total = Math.round(n * rate * EARLY_BIRD);
     const saved = indiv - total;
     const pct   = Math.round((saved / indiv) * 100);
 
