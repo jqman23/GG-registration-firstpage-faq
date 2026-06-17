@@ -516,3 +516,23 @@ html, body {
   color: rgba(0,0,0,.5);
   padding-top: 8px;
 }
+
+/* Group tier highlight colors aligned with GG-pricing-page-widget */
+.groupContent.tierSmall .groupPill,
+.groupContent.tierSmall .groupTierItem.active {
+  background: #187089;
+  border-color: #187089;
+}
+
+.groupContent.tierMedium .groupPill,
+.groupContent.tierMedium .groupTierItem.active {
+  background: #c47a1e;
+  border-color: #c47a1e;
+}
+
+.groupContent.tierLarge .groupPill,
+.groupContent.tierLarge .groupTierItem.active {
+  background: #6b6b30;
+  border-color: #6b6b30;
+}
+
