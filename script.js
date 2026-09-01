@@ -1,6 +1,5 @@
 (function () {
   const INDIV = 175;
-  const EARLY_BIRD = 0.90;
 
   function groupRate(n) {
     if (n >= 50) return 90;
@@ -39,7 +38,7 @@
 
     const rate = groupRate(n);
     const indiv = n * INDIV;
-    const total = Math.round(n * rate * EARLY_BIRD);
+    const total = n * rate;
     const saved = indiv - total;
 
     document.getElementById('groupPill').textContent = n + ' people';
